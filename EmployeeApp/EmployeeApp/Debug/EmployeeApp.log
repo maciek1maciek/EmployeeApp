@@ -1,16 +1,17 @@
 ﻿  Employee.cpp
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(10,10): error C3646: "n": nieznany specyfikator przesłonięcia
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(10,10): error C2059: błąd składniowy: „,”
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(10,13): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(14,10): error C2061: błąd składniowy: identyfikator „string”
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.cpp(5,79): error C2511: „Employee::Employee(std::string,std::string,int,int,position)”: Przeciążona funkcja składowa nie została znaleziona w „Employee”
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(8): message : zobacz deklarację „Employee”
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(9,10): error C3646: "n": nieznany specyfikator przesłonięcia
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(9,10): error C2059: błąd składniowy: „,”
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(9,13): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(13,10): error C2061: błąd składniowy: identyfikator „string”
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.cpp(5,78): error C2511: „Employee::Employee(std::string,std::string,int,int,position)”: Przeciążona funkcja składowa nie została znaleziona w „Employee”
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(7): message : zobacz deklarację „Employee”
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.cpp(5,83): error C2550: "Employee::{ctor}": listy inicjatorów konstruktora są dozwolone tylko dla definicji konstruktora
 E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.cpp(7,9): error C2597: niedozwolone odwołanie do niestatycznej składowej „Employee::name”
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(11): message : zobacz deklarację „Employee::name”
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(10): message : zobacz deklarację „Employee::name”
   Main.cpp
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(10,10): error C3646: "n": nieznany specyfikator przesłonięcia
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(10,10): error C2059: błąd składniowy: „,”
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(10,13): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(14,10): error C2061: błąd składniowy: identyfikator „string”
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(9,10): error C3646: "n": nieznany specyfikator przesłonięcia
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(9,10): error C2059: błąd składniowy: „,”
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(9,13): error C2238: nieoczekiwany(e) token(y) poprzedzający(e) ";"
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Employee.h(13,10): error C2061: błąd składniowy: identyfikator „string”
 E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(9,31): error C2661: "Employee::Employee": brak przeciążonej funkcji przyjmującej 5 argumenty
   Generowanie kodu...

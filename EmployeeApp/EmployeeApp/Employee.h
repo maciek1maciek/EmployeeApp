@@ -1,5 +1,4 @@
 #pragma once
-#include <conio.h>
 
 enum position {
 	teamLeader, ScrumMaster, JuniorDev, MidDev, SeniorDev
