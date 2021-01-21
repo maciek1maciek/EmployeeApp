@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 	int switchVar = 0,seniority,salary;
-	char name[20],surname[20],enumVal;
+	char name[20], surname[20];
 	bool petla = true;
 	vector<Employee> listEmployees;
 
@@ -30,6 +30,7 @@ int main() {
 		
 		}
 		case 1: {
+			int enumVal;
 			cout << "Dane pracownika:"<<endl;
 			cout << "Imie :"<<endl;
 			cin >> name;
@@ -44,10 +45,10 @@ int main() {
 			cin >> enumVal;
 			position p=teamLeader;
 			if (enumVal == 1) {
-				p = teamLeader;
+				 p = teamLeader;
 			}
 			else if (enumVal == 2) {
-				 p=ScrumMaster;
+				p=ScrumMaster;
 			}
 			else if (enumVal == 3)
 			{
@@ -62,10 +63,9 @@ int main() {
 			cout << "Staz pracy (w miesiacach): " << endl;
 			cin >> seniority;
 			cout << "Pensja: " << endl;
-			cin >>salary;
+			cin >> salary;
 			
-			//system("cls");
-			cout << p;
+			system("cls");
 			switchVar--;
 			break;
 		}
