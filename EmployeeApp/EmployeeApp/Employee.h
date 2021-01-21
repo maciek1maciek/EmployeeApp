@@ -1,7 +1,7 @@
 #pragma once
-
+#include <vector>
 enum position {
-	teamLeader, ScrumMaster, JuniorDev, MidDev, SeniorDev
+	teamLeader=1, ScrumMaster=2, JuniorDev=3, MidDev=4, SeniorDev=5
 };
 
 class Employee {
