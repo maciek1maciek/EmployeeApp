@@ -4,8 +4,7 @@ using namespace std;
 
 
 int main() 	{
-	//char b[20] = "Maciej";
-	string s = "maciejk";
-	Employee h(s,s,1,2,JuniorDev);
+	char b[20] = "Maciej";
+	Employee h(b,b,1,2,JuniorDev);
 
 }
