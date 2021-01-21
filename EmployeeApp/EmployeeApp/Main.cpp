@@ -40,16 +40,32 @@ int main() {
 			cout << "2-Srum Master :"<<endl;
 			cout << "3-Junior Dev :"<<endl;
 			cout << "4-MidDev :"<<endl;
+			cout << "5-SeniorDev :"<<endl;
 			cin >> enumVal;
-			if (enumVal == 0) {
-				position p(teamLeader);
+			position p=teamLeader;
+			if (enumVal == 1) {
+				p = teamLeader;
+			}
+			else if (enumVal == 2) {
+				 p=ScrumMaster;
+			}
+			else if (enumVal == 3)
+			{
+				p=JuniorDev;
+			}
+			else if (enumVal == 4) {
+				p=MidDev;
+			}
+			else if (enumVal == 5) {
+				p=SeniorDev;
 			}
 			cout << "Staz pracy (w miesiacach): " << endl;
 			cin >> seniority;
 			cout << "Pensja: " << endl;
 			cin >>salary;
 			
-			system("cls");
+			//system("cls");
+			cout << p;
 			switchVar--;
 			break;
 		}
