@@ -1,6 +1,7 @@
 #include <iostream>
-#include "Employee.h"
 using namespace std;
+#include "Employee.h"
+
 
 
 int main() {
