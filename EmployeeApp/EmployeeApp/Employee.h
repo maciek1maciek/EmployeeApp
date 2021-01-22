@@ -10,4 +10,5 @@ private:
 	int seniority, salary;		//seniority in months
 public:
 	Employee(char name[],char surname[],int seniority,int salary,position a);
+	void setName(char name[]);
 };

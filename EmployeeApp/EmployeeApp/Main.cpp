@@ -23,8 +23,6 @@ int main() {
 			cout << "6. Zapisz do pliku" << endl;
 			cout << "7. Wczytaj z pliku" << endl;
 			cout << "8. Zakoncz" << endl;
-
-
 			cin >> switchVar;
 			break;
 		
@@ -64,7 +62,10 @@ int main() {
 			cin >> seniority;
 			cout << "Pensja: " << endl;
 			cin >> salary;
-			
+
+			Employee employe(name, surname, seniority, salary, p);
+			listEmployees.push_back(employe);
+
 			system("cls");
 			switchVar--;
 			break;
