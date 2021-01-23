@@ -12,7 +12,7 @@ private:
 	char name[20],surname[20];
 	int seniority, salary;		//seniority in months
 public:
-	Employee(string s,char surname[],int seniority,int salary,position a);
+	Employee(string name,string surname,int seniority,int salary,position a);
 	void setName(char name[]);
 
 };

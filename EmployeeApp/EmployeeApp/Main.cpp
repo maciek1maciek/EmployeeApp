@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 	int switchVar = 0,seniority,salary;
-	char name[20], surname[20];
+	string name, surname;
 	bool petla = true;
 	vector<Employee> listEmployees;
 
