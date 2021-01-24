@@ -9,11 +9,13 @@ enum position {
 
 class Employee {
 private:
+	string valEnum;
 	string name,surname;
 	position p;
 	int seniority, salary;		//seniority in months
+	
 public:
 	Employee(string name,string surname,int seniority,int salary,position p);
 	friend ostream& operator<<(std::ostream& out, const Employee& emp);
-
+	string enumChange(position p);
 };

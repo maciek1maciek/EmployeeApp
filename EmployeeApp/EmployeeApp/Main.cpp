@@ -66,21 +66,21 @@ int main() {
 
 			Employee employe(name, surname, seniority, salary, p);
 			listEmployees.push_back(employe);
-			for (int i = 0; i < listEmployees.size(); i++)
-			{
-				cout << listEmployees[i] << endl;
-			}
 			//system("cls");
 			switchVar--;
 			break;
 		}
 		case 2: {
-			cout << "Dodanie pracownika";
-			cin >> switchVar;
+			cout << "Lista Wszystkich pracownikow";
+			for (int i = 0; i < listEmployees.size(); i++)
+			{
+				cout << listEmployees[i] << endl;
+			}
+			switchVar=0;
 			break;
 		}
 		case 3: {
-			cout << "Dodanie pracownika";
+			cout << "Edycja pracownika";
 			cin >> switchVar;
 			break;
 		}
