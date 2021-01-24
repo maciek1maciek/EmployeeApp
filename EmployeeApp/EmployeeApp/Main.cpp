@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "Employee.h"
+#include<fstream>
 
 int main() {
 	int switchVar = 0,seniority,salary,empNum=0;
@@ -267,12 +268,21 @@ int main() {
 					cout << listEmployees[i] << endl;
 				}
 			}
-
+			switchVar = 0;
 			break;
 		}
 		case 7: {
-			cout << "Dodanie pracownika";
-			cin >> switchVar;
+		
+			ofstream save("dane.txt");
+
+			for (int i = 0; i < listEmployees.size(); i++) {
+				save << listEmployees[i];
+			}
+			
+			save.close();
+
+			return 0;
+
 			break;
 		}
 		case 8: {

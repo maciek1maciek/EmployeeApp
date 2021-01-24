@@ -1,12 +1,13 @@
 ﻿  Main.cpp
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(77,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(94,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(150,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(177,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(192,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(213,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(228,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(243,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(263,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(145,8): warning C4101: "enumVal": lokalna zmienna, do której nie istnieje odwołanie
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(78,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(95,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(151,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(178,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(193,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(214,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(229,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(244,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(264,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(278,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(146,8): warning C4101: "enumVal": lokalna zmienna, do której nie istnieje odwołanie
   EmployeeApp.vcxproj -> E:\EmployeeApp\EmployeeApp\EmployeeApp\Debug\EmployeeApp.exe
