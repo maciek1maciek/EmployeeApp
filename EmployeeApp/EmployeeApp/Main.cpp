@@ -19,10 +19,11 @@ int main() {
 			cout << "2. Wyswietlenie listy wszystkich pracownikow" << endl;
 			cout << "3. Edycja danych pracownikow" << endl;
 			cout << "4. Usuniecie pracownika" << endl;
-			cout << "5. Szukaj pracownika" << endl;	//dodac opcje z pensja w tym
-			cout << "6. Zapisz do pliku" << endl;
-			cout << "7. Wczytaj z pliku" << endl;
-			cout << "8. Zakoncz" << endl;
+			cout << "5. Szukaj pracownika po cechach" << endl;	//dodac opcje z pensja w tym
+			cout << "6. Szukaj pracownika powyzej/ponizej podanej pensji" << endl;	//dodac opcje z pensja w tym
+			cout << "7. Zapisz do pliku" << endl;
+			cout << "8. Wczytaj z pliku" << endl;
+			cout << "9. Zakoncz" << endl;
 			cin >> switchVar;
 			break;
 
@@ -253,8 +254,20 @@ int main() {
 			
 		}
 		case 6: {
-			cout << "Dodanie pracownika";
-			cin >> switchVar;
+			int down, up;
+			cout << "Podaj dolny przedzial pensji pracownika/ow:"<<endl;
+			cin >> down;
+			cout << "Podaj gorny przedzial pensji pracownika/ow:"<<endl;
+			cin >> up;
+
+			for (int i = 0; i < listEmployees.size(); i++)
+			{
+				if (listEmployees[i].getSalary() >down && listEmployees[i].getSalary() <up) {
+					cout << " Pracownik nr: " << i + 1 << endl;
+					cout << listEmployees[i] << endl;
+				}
+			}
+
 			break;
 		}
 		case 7: {
