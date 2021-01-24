@@ -1,3 +1,4 @@
 ﻿  Main.cpp
-E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(75,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(76,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+E:\EmployeeApp\EmployeeApp\EmployeeApp\EmployeeApp\Main.cpp(88,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
   EmployeeApp.vcxproj -> E:\EmployeeApp\EmployeeApp\EmployeeApp\Debug\EmployeeApp.exe

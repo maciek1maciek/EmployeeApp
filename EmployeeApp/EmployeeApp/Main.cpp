@@ -5,9 +5,10 @@ using namespace std;
 
 
 int main() {
-	int switchVar = 0,seniority,salary;
+	int switchVar = 0,seniority,salary,empNum=0;
 	string name, surname;
 	bool petla = true;
+	
 	vector<Employee> listEmployees;
 
 	while (petla) {
@@ -66,12 +67,12 @@ int main() {
 
 			Employee employe(name, surname, seniority, salary, p);
 			listEmployees.push_back(employe);
-			//system("cls");
+			system("cls");
 			switchVar--;
 			break;
 		}
 		case 2: {
-			cout << "Lista Wszystkich pracownikow";
+			cout << " Lista Wszystkich pracownikow "<<endl;
 			for (int i = 0; i < listEmployees.size(); i++)
 			{
 				cout << listEmployees[i] << endl;
@@ -80,8 +81,49 @@ int main() {
 			break;
 		}
 		case 3: {
-			cout << "Edycja pracownika";
-			cin >> switchVar;
+			int enumVal;
+			cout << " Edycja pracownika: "<<endl;
+			cout << " Pracownika o ktorym numerze chcesz edytowac?"<<endl;
+			cout << " Lista Wszystkich pracownikow" << endl;
+			for (int i = 0; i < listEmployees.size(); i++)
+			{
+				cout << listEmployees[i] << endl;
+			}
+			cin >> empNum;
+			cout << "Dane pracownika:" << endl;
+			cout << "Imie :" << endl;
+			cin >> name;
+			cout << "Nazwisko :" << endl;
+			cin >> surname;
+			cout << "Stanowisko :" << endl;
+			cout << "1-Team Leader :" << endl;
+			cout << "2-Srum Master :" << endl;
+			cout << "3-Junior Dev :" << endl;
+			cout << "4-MidDev :" << endl;
+			cout << "5-SeniorDev :" << endl;
+			cin >> enumVal;
+			position p = teamLeader;
+			if (enumVal == 1) {
+				p = teamLeader;
+			}
+			else if (enumVal == 2) {
+				p = ScrumMaster;
+			}
+			else if (enumVal == 3)
+			{
+				p = JuniorDev;
+			}
+			else if (enumVal == 4) {
+				p = MidDev;
+			}
+			else if (enumVal == 5) {
+				p = SeniorDev;
+			}
+			cout << "Staz pracy (w miesiacach): " << endl;
+			cin >> seniority;
+			cout << "Pensja: " << endl;
+			cin >> salary;
+
 			break;
 		}
 		case 4: {
@@ -114,27 +156,5 @@ int main() {
 		}
 
 	}
-		
-	/*
-	do {
-		
-		
-		
-		if (!(cin >> a))
-	{
-		cin.clear();
-		cin.sync();
-		cout << "blad";
-	}
-	else {
-
-	}
-	} while (a!=0);
-	*/	
-	char b[20] = "Maciej";
-	
-	Employee h(b,b,1,2,JuniorDev);
-	
-
 	
 }
