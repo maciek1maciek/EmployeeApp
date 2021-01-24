@@ -1,0 +1,14 @@
+ 
+ Imie: Maciej
+ Nazwisko: musial
+ staz: 12(w miesiacach) 
+ pensja: 3
+ stanowisko: Team Leader 
+ 
+ 
+ Imie: szymon
+ Nazwisko: dasasdads
+ staz: 313(w miesiacach) 
+ pensja: 1222
+ stanowisko: Junior Dev 
+ 

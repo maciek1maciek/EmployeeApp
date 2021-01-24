@@ -276,16 +276,41 @@ int main() {
 			ofstream save("dane.txt");
 
 			for (int i = 0; i < listEmployees.size(); i++) {
-				save << listEmployees[i];
+				save << " " << endl;
+				save << listEmployees[i] <<endl;
 			}
 			
 			save.close();
+
+			switchVar = 0;
+			break;
+		}
+		case 8: {
+			string file;
+			cout << "Podaj nazwe pliku"<<endl;
+			cin >> file;
+
+			ifstream odczyt(file);
+
+			if (odczyt.is_open())
+			{
+				char wiersz[10000];//maksymalnie 9999 znaków w wierszu
+				while (odczyt.getline(wiersz, 10000)) //dopóki jest co czytaæ
+				{
+					cout << wiersz << endl; //wypisz to co wczyta³es z pliku
+					//lub wykonaj inn¹ operacjê
+				}
+			}
+			else
+				cout << "Nie uda³o siê otworzyæ pliku";
+
+			cin.get();
 
 			return 0;
 
 			break;
 		}
-		case 8: {
+		case 9: {
 			exit(0);
 			break;
 		}
