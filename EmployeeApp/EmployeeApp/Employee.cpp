@@ -3,8 +3,20 @@
 #include <cstring>
 using namespace std;
 
-Employee::Employee(string s, string surname, int seniority, int salary, position a){
+Employee::Employee(string name, string surname, int seniority, int salary, position p):name(name),surname(surname),seniority(seniority),salary(salary),p(p){
 	
+}
+
+
+ostream& operator<<(std::ostream& out, const Employee& emp) {
+	out << " \n" <<
+		"Imie: " << emp.name << "\n" <<
+		" Nazwisko: " << emp.surname << "\n" <<
+		" staz: " << emp.seniority << "(w miesiacach) " << "\n" <<
+		" pensja: " << emp.salary << "\n" <<
+		" stanowisko: " << emp.p << " \n" <<
+		" ";
+		return out;
 }
 
 

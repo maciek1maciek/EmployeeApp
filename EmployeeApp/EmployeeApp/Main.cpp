@@ -66,8 +66,11 @@ int main() {
 
 			Employee employe(name, surname, seniority, salary, p);
 			listEmployees.push_back(employe);
-
-			system("cls");
+			for (int i = 0; i < listEmployees.size(); i++)
+			{
+				cout << listEmployees[i] << endl;
+			}
+			//system("cls");
 			switchVar--;
 			break;
 		}
