@@ -13,13 +13,11 @@ private:
 	string name,surname;
 	position p;
 	int seniority, salary ;		//seniority in months
-	static int ID;
-	int idNot;
 	
 public:
 	Employee(string name,string surname,int seniority,int salary,position p);
 	friend ostream& operator<<(std::ostream& out, const Employee& emp);
 	string enumChange(position p);
-	void init();
+	
 };
 

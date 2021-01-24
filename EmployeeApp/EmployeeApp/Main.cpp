@@ -2,8 +2,6 @@
 using namespace std;
 #include "Employee.h"
 
-
-
 int main() {
 	int switchVar = 0,seniority,salary,empNum=0;
 	string name, surname;
@@ -72,24 +70,37 @@ int main() {
 			break;
 		}
 		case 2: {
+			system("cls");
 			cout << " Lista Wszystkich pracownikow "<<endl;
+			cout << " " << endl;
 			for (int i = 0; i < listEmployees.size(); i++)
 			{
+				cout << " Pracownik nr: " << i + 1 << endl;
 				cout << listEmployees[i] << endl;
 			}
 			switchVar=0;
 			break;
 		}
 		case 3: {
+			system("cls");
 			int enumVal;
+			int id=1;
 			cout << " Edycja pracownika: "<<endl;
 			cout << " Pracownika o ktorym numerze chcesz edytowac?"<<endl;
-			cout << " Lista Wszystkich pracownikow" << endl;
-			for (int i = 0; i < listEmployees.size(); i++)
+			cout << " " << endl;
+			cout << " Lista Wszystkich pracownikow:" << endl;
+			cout << " " << endl;
+			for (int i = 0; i < listEmployees.size(); i++,id++)
 			{
+				cout <<" Pracownik nr: "<< id<<endl;
 				cout << listEmployees[i] << endl;
 			}
+
 			cin >> empNum;
+			--empNum;
+			//listEmployees.erase(listEmployees.begin() + empNum);
+			empNum = 0;
+
 			cout << "Dane pracownika:" << endl;
 			cout << "Imie :" << endl;
 			cin >> name;
@@ -123,12 +134,28 @@ int main() {
 			cin >> seniority;
 			cout << "Pensja: " << endl;
 			cin >> salary;
-
+			Employee employe(name, surname, seniority, salary, p);	
+			listEmployees.insert(listEmployees.begin()+empNum,employe);
 			break;
 		}
 		case 4: {
-			cout << "Dodanie pracownika";
-			cin >> switchVar;
+			system("cls");
+			cout << "Usuwanie pracownika";
+			int enumVal;
+			cout << " Pracownika o ktorym numerze chcesz usunac?" << endl;
+			cout << " " << endl;
+			cout << " Lista Wszystkich pracownikow:" << endl;
+			cout << " " << endl;
+			for (int i = 0; i < listEmployees.size(); i++)
+			{
+				cout << " Pracownik nr: " << i + 1 << endl;
+				cout << listEmployees[i] << endl;
+			}
+
+			cin >> empNum;
+			--empNum;
+			listEmployees.erase(listEmployees.begin() + empNum);
+			switchVar = 0;
 			break;
 		}
 		case 5: {
