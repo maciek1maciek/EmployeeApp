@@ -98,8 +98,7 @@ int main() {
 
 			cin >> empNum;
 			--empNum;
-			//listEmployees.erase(listEmployees.begin() + empNum);
-			empNum = 0;
+			listEmployees.erase(listEmployees.begin() + empNum);
 
 			cout << "Dane pracownika:" << endl;
 			cout << "Imie :" << endl;
