@@ -42,4 +42,22 @@ ostream& operator<<(std::ostream& out, const Employee& emp) {
 		return out;
 }
 
+string Employee::getName() {
+	return name;
+}
+
+string Employee::getSurname() {
+	return surname;
+}
+
+int Employee::getSeniority() {
+	return seniority;
+}
+int Employee::getSalary() {
+	return salary;
+}
+position Employee::getPosition() {
+	return p;
+}
+
 

@@ -25,38 +25,39 @@ int main() {
 			cout << "8. Zakoncz" << endl;
 			cin >> switchVar;
 			break;
-		
+
 		}
 		case 1: {
+			system("cls");
 			int enumVal;
-			cout << "Dane pracownika:"<<endl;
-			cout << "Imie :"<<endl;
+			cout << "Dane pracownika:" << endl;
+			cout << "Imie :" << endl;
 			cin >> name;
-			cout << "Nazwisko :"<<endl;
+			cout << "Nazwisko :" << endl;
 			cin >> surname;
-			cout << "Stanowisko :"<<endl;
-			cout << "1-Team Leader :"<<endl;
-			cout << "2-Srum Master :"<<endl;
-			cout << "3-Junior Dev :"<<endl;
-			cout << "4-MidDev :"<<endl;
-			cout << "5-SeniorDev :"<<endl;
+			cout << "Stanowisko :" << endl;
+			cout << "1-Team Leader :" << endl;
+			cout << "2-Srum Master :" << endl;
+			cout << "3-Junior Dev :" << endl;
+			cout << "4-MidDev :" << endl;
+			cout << "5-SeniorDev :" << endl;
 			cin >> enumVal;
-			position p=teamLeader;
+			position p = teamLeader;
 			if (enumVal == 1) {
-				 p = teamLeader;
+				p = teamLeader;
 			}
 			else if (enumVal == 2) {
-				p=ScrumMaster;
+				p = ScrumMaster;
 			}
 			else if (enumVal == 3)
 			{
-				p=JuniorDev;
+				p = JuniorDev;
 			}
 			else if (enumVal == 4) {
-				p=MidDev;
+				p = MidDev;
 			}
 			else if (enumVal == 5) {
-				p=SeniorDev;
+				p = SeniorDev;
 			}
 			cout << "Staz pracy (w miesiacach): " << endl;
 			cin >> seniority;
@@ -70,29 +71,28 @@ int main() {
 			break;
 		}
 		case 2: {
-			system("cls");
-			cout << " Lista Wszystkich pracownikow "<<endl;
+			cout << " Lista Wszystkich pracownikow " << endl;
 			cout << " " << endl;
 			for (int i = 0; i < listEmployees.size(); i++)
 			{
 				cout << " Pracownik nr: " << i + 1 << endl;
 				cout << listEmployees[i] << endl;
 			}
-			switchVar=0;
+			switchVar = 0;
 			break;
 		}
 		case 3: {
 			system("cls");
 			int enumVal;
-			int id=1;
-			cout << " Edycja pracownika: "<<endl;
-			cout << " Pracownika o ktorym numerze chcesz edytowac?"<<endl;
+			int id = 1;
+			cout << " Edycja pracownika: " << endl;
+			cout << " Pracownika o ktorym numerze chcesz edytowac?" << endl;
 			cout << " " << endl;
 			cout << " Lista Wszystkich pracownikow:" << endl;
 			cout << " " << endl;
-			for (int i = 0; i < listEmployees.size(); i++,id++)
+			for (int i = 0; i < listEmployees.size(); i++, id++)
 			{
-				cout <<" Pracownik nr: "<< id<<endl;
+				cout << " Pracownik nr: " << id << endl;
 				cout << listEmployees[i] << endl;
 			}
 
@@ -133,8 +133,9 @@ int main() {
 			cin >> seniority;
 			cout << "Pensja: " << endl;
 			cin >> salary;
-			Employee employe(name, surname, seniority, salary, p);	
-			listEmployees.insert(listEmployees.begin()+empNum,employe);
+			Employee employe(name, surname, seniority, salary, p);
+			listEmployees.insert(listEmployees.begin() + empNum, employe);
+			switchVar = 0;
 			break;
 		}
 		case 4: {
@@ -158,9 +159,98 @@ int main() {
 			break;
 		}
 		case 5: {
-			cout << "Dodanie pracownika";
-			cin >> switchVar;
-			break;
+			int choice;
+			cout << "Wyszukaj pracownika " << endl;
+			cout << "Podaj ceche pracownika ktorego chcesz wyszukac: " << endl;
+			cout << "1.Imie " << endl;
+			cout << "2.Nazwisko " << endl;
+			cout << "3.Stanowisko " << endl;
+			cout << "4.Staz pracy (w miesiacach) " << endl;
+			cout << "5.Pensja " << endl;
+			cin >> choice;
+
+			if (choice == 1) {
+				cout << "Podaj imie" << endl;
+				cin >> name;
+
+				for (int i = 0; i < listEmployees.size(); i++)
+				{
+					if (listEmployees[i].getName() == name) {
+						cout << " Pracownik nr: " << i + 1 << endl;
+						cout << listEmployees[i] << endl;
+					}
+				}
+				switchVar = 0;
+				break;
+			}
+
+			else if (choice == 2) {
+				cout << "Podaj nazwisko" << endl;
+				cin >> surname;
+
+				for (int i = 0; i < listEmployees.size(); i++)
+				{
+					if (listEmployees[i].getSurname() == surname) {
+						cout << " Pracownik nr: " << i + 1 << endl;
+						cout << listEmployees[i] << endl;
+					}
+				}
+				switchVar = 0;
+				break;
+			}
+
+			else if (choice == 3) {
+				int pos;
+				cout << "Podaj stanowisko" << endl;
+				cout << "1-Team Leader :" << endl;
+				cout << "2-Srum Master :" << endl;
+				cout << "3-Junior Dev :" << endl;
+				cout << "4-MidDev :" << endl;
+				cout << "5-SeniorDev :" << endl;
+				cin >> pos;
+
+				for (int i = 0; i < listEmployees.size(); i++)
+				{
+					if (listEmployees[i].getPosition() ==pos) {
+						cout << " Pracownik nr: " << i + 1 << endl;
+						cout << listEmployees[i] << endl;
+					}
+				}
+				switchVar = 0;
+				break;
+			}
+
+			else if (choice == 4) {
+				cout << "Podaj dlugosc stazu pracy:" << endl;
+				cin >> seniority;
+
+				for (int i = 0; i < listEmployees.size(); i++)
+				{
+					if (listEmployees[i].getSeniority() == seniority) {
+						cout << " Pracownik nr: " << i + 1 << endl;
+						cout << listEmployees[i] << endl;
+					}
+				}
+				switchVar = 0;
+				break;
+			}
+
+			else if (choice == 5) {
+				cout << "Podaj wysokosc pensji:" << endl;
+				cin >> salary;
+
+				for (int i = 0; i < listEmployees.size(); i++)
+				{
+					if (listEmployees[i].getSalary() == salary) {
+						cout << " Pracownik nr: " << i + 1 << endl;
+						cout << listEmployees[i] << endl;
+					}
+				}
+				switchVar = 0;
+				break;
+			}
+
+			
 		}
 		case 6: {
 			cout << "Dodanie pracownika";
