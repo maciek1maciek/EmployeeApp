@@ -287,7 +287,7 @@ int main() {
 		case 7: {
 			string saveFile;
 
-			cout<<"Podaj nazwe pliku do zapisu: "<<endl;
+			cout<<"Podaj nazwe pliku do zapisu z rozszerzeniem .txt: "<<endl;
 			cin >> saveFile;
 			ofstream save(saveFile);
 
@@ -303,7 +303,7 @@ int main() {
 		case 8: {
 			string file;
 
-			cout << "Podaj nazwe pliku"<<endl;
+			cout << "Podaj nazwe pliku z rozszerzeniem .txt"<<endl;
 			cin >> file;
 			ifstream odczyt(file);
 
