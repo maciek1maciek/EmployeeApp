@@ -31,6 +31,7 @@ int main() {
 		}
 		case 1: {
 			system("cls");
+
 			int enumVal;
 			cout << "Dane pracownika:" << endl;
 			cout << "Imie :" << endl;
@@ -45,6 +46,7 @@ int main() {
 			cout << "5-SeniorDev :" << endl;
 			cin >> enumVal;
 			position p = teamLeader;
+
 			if (enumVal == 1) {
 				p = teamLeader;
 			}
@@ -61,13 +63,14 @@ int main() {
 			else if (enumVal == 5) {
 				p = SeniorDev;
 			}
+
 			cout << "Staz pracy (w miesiacach): " << endl;
 			cin >> seniority;
 			cout << "Pensja: " << endl;
 			cin >> salary;
-
 			Employee employe(name, surname, seniority, salary, p);
 			listEmployees.push_back(employe);
+
 			system("cls");
 			switchVar--;
 			break;
@@ -75,16 +78,19 @@ int main() {
 		case 2: {
 			cout << " Lista Wszystkich pracownikow " << endl;
 			cout << " " << endl;
+
 			for (int i = 0; i < listEmployees.size(); i++)
 			{
 				cout << " Pracownik nr: " << i + 1 << endl;
 				cout << listEmployees[i] << endl;
 			}
+
 			switchVar = 0;
 			break;
 		}
 		case 3: {
 			system("cls");
+
 			int enumVal;
 			int id = 1;
 			cout << " Edycja pracownika: " << endl;
@@ -92,15 +98,16 @@ int main() {
 			cout << " " << endl;
 			cout << " Lista Wszystkich pracownikow:" << endl;
 			cout << " " << endl;
+
 			for (int i = 0; i < listEmployees.size(); i++, id++)
 			{
 				cout << " Pracownik nr: " << id << endl;
 				cout << listEmployees[i] << endl;
 			}
-
 			cin >> empNum;
-			--empNum;
-			listEmployees.erase(listEmployees.begin() + empNum);
+
+			--empNum;			//dekrementacja po to zeby nie wyjsc za zakres
+			listEmployees.erase(listEmployees.begin() + empNum);		
 
 			cout << "Dane pracownika:" << endl;
 			cout << "Imie :" << endl;
@@ -115,6 +122,7 @@ int main() {
 			cout << "5-SeniorDev :" << endl;
 			cin >> enumVal;
 			position p = teamLeader;
+
 			if (enumVal == 1) {
 				p = teamLeader;
 			}
@@ -131,32 +139,36 @@ int main() {
 			else if (enumVal == 5) {
 				p = SeniorDev;
 			}
+
 			cout << "Staz pracy (w miesiacach): " << endl;
 			cin >> seniority;
 			cout << "Pensja: " << endl;
 			cin >> salary;
 			Employee employe(name, surname, seniority, salary, p);
 			listEmployees.insert(listEmployees.begin() + empNum, employe);
+
 			switchVar = 0;
 			break;
 		}
 		case 4: {
 			system("cls");
+
 			cout << "Usuwanie pracownika";
 			int enumVal;
 			cout << " Pracownika o ktorym numerze chcesz usunac?" << endl;
 			cout << " " << endl;
 			cout << " Lista Wszystkich pracownikow:" << endl;
 			cout << " " << endl;
+
 			for (int i = 0; i < listEmployees.size(); i++)
 			{
 				cout << " Pracownik nr: " << i + 1 << endl;
 				cout << listEmployees[i] << endl;
 			}
-
 			cin >> empNum;
-			--empNum;
+			--empNum;			//dekrementacja po to zeby nie wyjsc za zakres
 			listEmployees.erase(listEmployees.begin() + empNum);
+
 			switchVar = 0;
 			break;
 		}
@@ -268,18 +280,21 @@ int main() {
 					cout << listEmployees[i] << endl;
 				}
 			}
+
 			switchVar = 0;
 			break;
 		}
 		case 7: {
-		
-			ofstream save("dane.txt");
+			string saveFile;
+
+			cout<<"Podaj nazwe pliku do zapisu: "<<endl;
+			cin >> saveFile;
+			ofstream save(saveFile);
 
 			for (int i = 0; i < listEmployees.size(); i++) {
 				save << " " << endl;
 				save << listEmployees[i] <<endl;
 			}
-			
 			save.close();
 
 			switchVar = 0;
@@ -287,27 +302,26 @@ int main() {
 		}
 		case 8: {
 			string file;
+
 			cout << "Podaj nazwe pliku"<<endl;
 			cin >> file;
-
 			ifstream odczyt(file);
 
 			if (odczyt.is_open())
 			{
-				char wiersz[10000];//maksymalnie 9999 znaków w wierszu
+				char wiersz[10000];
 				while (odczyt.getline(wiersz, 10000)) //dopóki jest co czytaæ
 				{
 					cout << wiersz << endl; //wypisz to co wczyta³es z pliku
-					//lub wykonaj inn¹ operacjê
 				}
 			}
 			else
-				cout << "Nie uda³o siê otworzyæ pliku";
+				cout << "Nie udalo sie otworzyc pliku";
 
 			cin.get();
 
-			return 0;
 
+			switchVar = 0;
 			break;
 		}
 		case 9: {

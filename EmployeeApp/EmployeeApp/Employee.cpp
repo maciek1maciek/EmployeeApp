@@ -8,9 +8,7 @@ Employee::Employee(string name, string surname, int seniority, int salary, posit
 	
 }
 
-
-
-string Employee::enumChange(position p) {
+string Employee::enumChange(position p) {		//metoda ktora przyjmuje enum i zamienia go na wartosc stringowa
 	switch (p) {
 		case 1:
 			valEnum= "Team Leader";
