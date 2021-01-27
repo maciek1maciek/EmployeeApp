@@ -3,36 +3,49 @@ using namespace std;
 #include "Employee.h"
 #include<fstream>
 
+void printMenuOne() {
+	cout << "Witaj w interfejsie uzytkownika !" << endl;
+	cout << "" << endl;
+	cout << "Wybierz opcje:" << endl;
+	cout << "1. Dodanie pracownika" << endl;
+	cout << "2. Wyswietlenie listy wszystkich pracownikow" << endl;
+	cout << "3. Edycja danych pracownikow" << endl;
+	cout << "4. Usuniecie pracownika" << endl;
+	cout << "5. Szukaj pracownika po cechach" << endl;	//dodac opcje z pensja w tym
+	cout << "6. Szukaj pracownika powyzej/ponizej podanej pensji" << endl;	//dodac opcje z pensja w tym
+	cout << "7. Zapisz do pliku" << endl;
+	cout << "8. Wczytaj z pliku" << endl;
+	cout << "9. Zakoncz" << endl;
+}
+void printMenuFive() {
+	cout << "Wyszukaj pracownika " << endl;
+	cout << "Podaj ceche pracownika ktorego chcesz wyszukac: " << endl;
+	cout << "1.Imie " << endl;
+	cout << "2.Nazwisko " << endl;
+	cout << "3.Stanowisko " << endl;
+	cout << "4.Staz pracy (w miesiacach) " << endl;
+	cout << "5.Pensja " << endl;
+}
+
+
 int main() {
 	int switchVar = 0,seniority,salary,empNum=0;
 	string name, surname;
 	bool petla = true;
-	
 	vector<Employee> listEmployees;
 
 	while (petla) {
 		switch (switchVar) {
 		case 0: {
-			cout << "Witaj w interfejsie uzytkownika !" << endl;
-			cout << "" << endl;
-			cout << "Wybierz opcje:" << endl;
-			cout << "1. Dodanie pracownika" << endl;
-			cout << "2. Wyswietlenie listy wszystkich pracownikow" << endl;
-			cout << "3. Edycja danych pracownikow" << endl;
-			cout << "4. Usuniecie pracownika" << endl;
-			cout << "5. Szukaj pracownika po cechach" << endl;	//dodac opcje z pensja w tym
-			cout << "6. Szukaj pracownika powyzej/ponizej podanej pensji" << endl;	//dodac opcje z pensja w tym
-			cout << "7. Zapisz do pliku" << endl;
-			cout << "8. Wczytaj z pliku" << endl;
-			cout << "9. Zakoncz" << endl;
+			printMenuOne();
 			cin >> switchVar;
 			break;
 
 		}
 		case 1: {
 			system("cls");
-
 			int enumVal;
+
 			cout << "Dane pracownika:" << endl;
 			cout << "Imie :" << endl;
 			cin >> name;
@@ -45,6 +58,7 @@ int main() {
 			cout << "4-MidDev :" << endl;
 			cout << "5-SeniorDev :" << endl;
 			cin >> enumVal;
+
 			position p = teamLeader;
 
 			if (enumVal == 1) {
@@ -174,13 +188,7 @@ int main() {
 		}
 		case 5: {
 			int choice;
-			cout << "Wyszukaj pracownika " << endl;
-			cout << "Podaj ceche pracownika ktorego chcesz wyszukac: " << endl;
-			cout << "1.Imie " << endl;
-			cout << "2.Nazwisko " << endl;
-			cout << "3.Stanowisko " << endl;
-			cout << "4.Staz pracy (w miesiacach) " << endl;
-			cout << "5.Pensja " << endl;
+			printMenuFive();
 			cin >> choice;
 
 			if (choice == 1) {
@@ -267,15 +275,15 @@ int main() {
 			
 		}
 		case 6: {
-			int down, up;
+			int down,up;
 			cout << "Podaj dolny przedzial pensji pracownika/ow:"<<endl;
 			cin >> down;
-			cout << "Podaj gorny przedzial pensji pracownika/ow:"<<endl;
+			cout << "Podaj gorny przedzial pensji pracownika/ow:" << endl;
 			cin >> up;
 
 			for (int i = 0; i < listEmployees.size(); i++)
 			{
-				if (listEmployees[i].getSalary() >down && listEmployees[i].getSalary() <up) {
+				if (listEmployees[i].getSalary() >=down && listEmployees[i].getSalary() <= up) {
 					cout << " Pracownik nr: " << i + 1 << endl;
 					cout << listEmployees[i] << endl;
 				}
@@ -336,3 +344,4 @@ int main() {
 	}
 	
 }
+

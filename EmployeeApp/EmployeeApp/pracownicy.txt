@@ -1,0 +1,21 @@
+ 
+ Imie: szymon
+ Nazwisko: asdd
+ staz: 15(w miesiacach) 
+ pensja: 6000
+ stanowisko: Senior Dev 
+ 
+ 
+ Imie: darek
+ Nazwisko: darek
+ staz: 15(w miesiacach) 
+ pensja: 8000
+ stanowisko: Team Leader 
+ 
+ 
+ Imie: michal
+ Nazwisko: tyuuu
+ staz: 7(w miesiacach) 
+ pensja: 2000
+ stanowisko: Team Leader 
+ 
