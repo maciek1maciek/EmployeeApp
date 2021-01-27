@@ -11,8 +11,8 @@ void printMenuOne() {
 	cout << "2. Wyswietlenie listy wszystkich pracownikow" << endl;
 	cout << "3. Edycja danych pracownikow" << endl;
 	cout << "4. Usuniecie pracownika" << endl;
-	cout << "5. Szukaj pracownika po cechach" << endl;	//dodac opcje z pensja w tym
-	cout << "6. Szukaj pracownika powyzej/ponizej podanej pensji" << endl;	//dodac opcje z pensja w tym
+	cout << "5. Szukaj pracownika po cechach" << endl;	
+	cout << "6. Szukaj pracownika powyzej/ponizej podanej pensji" << endl;	
 	cout << "7. Zapisz do pliku" << endl;
 	cout << "8. Wczytaj z pliku" << endl;
 	cout << "9. Zakoncz" << endl;
@@ -120,7 +120,7 @@ int main() {
 			}
 			cin >> empNum;
 
-			--empNum;			//dekrementacja po to zeby nie wyjsc za zakres
+			--empNum;			
 			listEmployees.erase(listEmployees.begin() + empNum);		
 
 			cout << "Dane pracownika:" << endl;
@@ -180,7 +180,7 @@ int main() {
 				cout << listEmployees[i] << endl;
 			}
 			cin >> empNum;
-			--empNum;			//dekrementacja po to zeby nie wyjsc za zakres
+			--empNum;			
 			listEmployees.erase(listEmployees.begin() + empNum);
 
 			switchVar = 0;
@@ -318,9 +318,9 @@ int main() {
 			if (odczyt.is_open())
 			{
 				char wiersz[10000];
-				while (odczyt.getline(wiersz, 10000)) //dopóki jest co czytaæ
+				while (odczyt.getline(wiersz, 10000))
 				{
-					cout << wiersz << endl; //wypisz to co wczyta³es z pliku
+					cout << wiersz << endl; 
 				}
 			}
 			else
