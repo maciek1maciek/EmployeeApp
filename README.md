@@ -1,5 +1,5 @@
 # EmployeeApp
-small application which is created to confirm my basics abilites in c++ \n
+small application which is created to confirm my basics abilites in c++ 
 The application:
 -add a new Employee to vector
 -delete Employee
