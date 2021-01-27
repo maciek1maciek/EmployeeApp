@@ -1,2 +1,2 @@
 # EmployeeApp
-small application which is created to confirm my abilites in c++ ---during writing!!!
+small application which is created to confirm my basics abilites in c++
